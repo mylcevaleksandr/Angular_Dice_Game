@@ -1,0 +1,7 @@
+@import "../../../../assets/styles/mixins";
+
+.container {
+  @include head-lora-36;
+  color: #4ECCA3;
+  margin-top: 50px;
+}
