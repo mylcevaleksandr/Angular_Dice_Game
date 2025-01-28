@@ -1,5 +1,63 @@
+h1 {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
 
-.dice {
-  text-align: center;
-  display: inline-block;
+  &:hover {
+    transform: scale(90%);
+  }
+
+  .clickable {
+    pointer-events: auto;
+  }
+
+  &:not(.clickable) {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  gap: 6rem;
+
+  &_dice {
+    text-align: center;
+    display: inline-block;
+
+
+    .dice_image {
+      margin: 3rem auto;
+      position: relative;
+      width: 200px;
+      height: 200px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.not-winner {
+  display: none;
+}
+
+.winner {
+  display: block;
+}
+
+.rotate {
+  animation: rotateAnimation 1s infinite forwards;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,13 +1,23 @@
 <div class="container">
-  <h1>Refresh Me</h1>
+  <h1 [class.clickable]="!isDiceRolling()" (click)="rollDice()">Refresh Me</h1>
 
-  <div class="dice">
-    <p>Player 1</p>
-    <img class="img1" src="">
-  </div>
+  <div class="game">
+    <div class="game_dice">
+      <p>Player 1</p>
+      <div class="dice_image">
+        <img [src]="'././assets/images/dice'+ randomNumberFirst +'.png'" alt="dice" [class.rotate]="isRotating">
+      </div>
+      <p [class.winner]="firstPlayerWins" class="not-winner">Player 1 wins!</p>
+      <p [class.winner]="draw" class="not-winner">Draw!</p>
+    </div>
 
-  <div class="dice">
-    <p>Player 2</p>
-    <img class="img2" src="">
+    <div class="game_dice">
+      <p>Player 2</p>
+      <div class="dice_image">
+        <img [src]="'assets/images/dice'+ randomNumberSecond +'.png'" alt="dice" [class.rotate]="isRotating">
+      </div>
+      <p [class.winner]="secondPlayerWins" class="not-winner">Player 2 wins!</p>
+      <p [class.winner]="draw" class="not-winner">Draw!</p>
+    </div>
   </div>
 </div>

@@ -16,7 +16,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "options": {
+          "options": {  "allowedCommonJsDependencies": [
+            "js-md5"
+          ],
             "outputPath": "dist/dice-game",
             "index": "src/index.html",
             "main": "src/main.ts",

@@ -6,6 +6,7 @@ import {SharedModule} from "./shared/shared.module";
 import {HeaderComponent} from "./shared/layout/header/header.component";
 import {FooterComponent} from "./shared/layout/footer/footer.component";
 import {LayoutComponent} from "./shared/layout/layout.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {LayoutComponent} from "./shared/layout/layout.component";
     FooterComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     SharedModule,
     AppRoutingModule
   ],

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { StartComponent } from './start/start.component';
@@ -11,7 +11,8 @@ import { StartComponent } from './start/start.component';
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    NgOptimizedImage
   ]
 })
 export class MainModule { }

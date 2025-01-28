@@ -4,6 +4,9 @@ import {StartComponent} from "./start/start.component";
 
 const routes: Routes = [
   {
+    path: '', component: StartComponent
+  },
+  {
     path: 'start', component: StartComponent
   }
 ];
