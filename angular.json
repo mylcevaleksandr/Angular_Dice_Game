@@ -19,7 +19,7 @@
           "options": {  "allowedCommonJsDependencies": [
             "js-md5"
           ],
-            "outputPath": "dist/dice-game",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
