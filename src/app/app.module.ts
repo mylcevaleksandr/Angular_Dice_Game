@@ -7,6 +7,7 @@ import {HeaderComponent} from "./shared/layout/header/header.component";
 import {FooterComponent} from "./shared/layout/footer/footer.component";
 import {LayoutComponent} from "./shared/layout/layout.component";
 import {HttpClientModule} from "@angular/common/http";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import {HttpClientModule} from "@angular/common/http";
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
